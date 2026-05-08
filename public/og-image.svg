@@ -1,25 +1,17 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Brandveil Studio India</title>
-  <desc id="desc">Open Graph image for Brandveil Studio India digital agency.</desc>
-  <rect width="1200" height="630" fill="#061018"/>
-  <circle cx="210" cy="130" r="260" fill="#1DD8FF" fill-opacity="0.18"/>
-  <circle cx="990" cy="60" r="250" fill="#0A8DFF" fill-opacity="0.2"/>
-  <path d="M0 499C212 420 396 557 598 475C832 380 952 458 1200 363V630H0V499Z" fill="#0B1722"/>
-  <rect x="72" y="72" width="1056" height="486" rx="42" fill="white" fill-opacity="0.055" stroke="#8CD7FF" stroke-opacity="0.22"/>
-  <rect x="112" y="112" width="82" height="82" rx="41" fill="url(#paint0_linear)"/>
-  <text x="153" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="800" fill="#001018">B</text>
-  <text x="112" y="284" font-family="Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-4" fill="#EEF8FF">Brandveil Studio India</text>
-  <text x="116" y="352" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#9FB3C4">Website Design • Branding • Logo Design • Content • SEO</text>
-  <rect x="116" y="416" width="288" height="64" rx="32" fill="url(#paint1_linear)"/>
-  <text x="260" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#001018">Start on WhatsApp</text>
-  <defs>
-    <linearGradient id="paint0_linear" x1="112" y1="112" x2="194" y2="194" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1DD8FF"/>
-      <stop offset="1" stop-color="#0A8DFF"/>
-    </linearGradient>
-    <linearGradient id="paint1_linear" x1="116" y1="416" x2="404" y2="480" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1DD8FF"/>
-      <stop offset="1" stop-color="#0A8DFF"/>
-    </linearGradient>
-  </defs>
+  <desc id="desc">Warm minimal Open Graph image for Brandveil Studio India digital agency.</desc>
+  <rect width="1200" height="630" fill="#FBF7EF"/>
+  <rect x="68" y="60" width="1064" height="510" rx="44" fill="#FFFDF8" stroke="#D9CAB8" stroke-width="2"/>
+  <circle cx="1002" cy="132" r="134" fill="#E7EEF1"/>
+  <circle cx="170" cy="492" r="168" fill="#F0DFD6"/>
+  <rect x="112" y="108" width="84" height="84" rx="42" fill="#E8EDE3" stroke="#C9D0BF"/>
+  <text x="154" y="164" text-anchor="middle" font-family="Georgia, serif" font-size="50" font-weight="700" fill="#3D4639">B</text>
+  <text x="112" y="278" font-family="Georgia, serif" font-size="70" font-weight="500" letter-spacing="-4" fill="#242321">Brandveil Studio India</text>
+  <text x="116" y="344" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#6D6961">Website Design · Branding · Logo Design · Content · SEO</text>
+  <rect x="116" y="416" width="300" height="68" rx="34" fill="#242321"/>
+  <text x="266" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#FFFDF8">Start on WhatsApp</text>
+  <rect x="790" y="374" width="254" height="110" rx="24" fill="#E8EDE3" stroke="#C9D0BF"/>
+  <text x="820" y="424" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="#242321">Mobile-first</text>
+  <text x="820" y="458" font-family="Arial, sans-serif" font-size="18" fill="#6D6961">Clean live previews</text>
 </svg>

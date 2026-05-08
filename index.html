@@ -7,6 +7,8 @@
     <meta name="description" content="Brandveil Studio India helps Indian businesses with mobile-first websites, branding, logo design, content creation and SEO." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://brandveil-studio-india.vercel.app" />
+    <meta name="theme-color" content="#fbf7ef" />
+
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_IN" />
     <meta property="og:site_name" content="Brandveil Studio India" />
@@ -16,12 +18,12 @@
     <meta property="og:image" content="https://brandveil-studio-india.vercel.app/og-image.svg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Brandveil Studio India digital agency landing page preview" />
+    <meta property="og:image:alt" content="Warm ivory Brandveil Studio India website design preview" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Brandveil Studio India | Website Design, Branding &amp; SEO Agency" />
     <meta name="twitter:description" content="Brandveil Studio India helps Indian businesses with mobile-first websites, branding, logo design, content creation and SEO." />
     <meta name="twitter:image" content="https://brandveil-studio-india.vercel.app/og-image.svg" />
-    <meta name="theme-color" content="#07111d" />
+
     <link rel="preload" href="/styles.css" as="style" />
     <link rel="stylesheet" href="/styles.css" />
     <script type="application/ld+json">
@@ -43,149 +45,204 @@
           "areaServed": "IN",
           "availableLanguage": ["en", "hi"]
         },
-        "makesOffer": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "website design" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "full stack development" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "branding" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "logo design" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "content creation" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO" } }
-        ]
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Digital agency services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "website design" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "full stack development" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "branding" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "logo design" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "content creation" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO" } }
+          ]
+        }
       }
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Brandveil Studio home">
         <span class="brand-mark" aria-hidden="true">B</span>
         <span>Brandveil Studio</span>
       </a>
+
       <nav class="nav-links" aria-label="Main menu">
         <a href="#services">Services</a>
         <a href="#work">Work</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="header-action" href="https://wa.me/919631192011?text=Hi%20Brandveil%20Studio%20India%2C%20I%20want%20to%20build%20a%20business%20website." target="_blank" rel="noreferrer">WhatsApp</a>
+
+      <a class="header-action" href="https://wa.me/919631192011?text=Hi%20Brandveil%20Studio%20India%2C%20I%20want%20to%20start%20a%20project." target="_blank" rel="noreferrer">Start a Project</a>
     </header>
 
-    <main id="top">
-      <section class="hero section-shell" aria-labelledby="hero-title">
-        <div class="hero-copy reveal">
+    <main id="main">
+      <section id="top" class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
           <p class="eyebrow">Digital agency for Indian businesses</p>
-          <h1 id="hero-title">Brandveil Studio India</h1>
-          <p class="intro">Brandveil Studio India is a digital agency offering website design, full stack development, branding, logo design, content creation and SEO for Indian businesses.</p>
-          <h2>Websites, branding &amp; SEO that make your business look serious online.</h2>
-          <p class="subheadline">Brandveil Studio India builds mobile-first websites, logos, content and SEO-ready brand presence for Indian businesses.</p>
+          <h1 id="hero-title">Websites and branding that make your business feel trustworthy online.</h1>
+          <p class="subheadline">Brandveil Studio India creates mobile-first websites, brand visuals, content and SEO-ready pages for Indian businesses.</p>
           <div class="button-row" aria-label="Primary actions">
             <a class="btn btn-primary" href="https://wa.me/919631192011?text=Hi%20Brandveil%20Studio%20India%2C%20I%20want%20to%20build%20a%20business%20website." target="_blank" rel="noreferrer">Start on WhatsApp</a>
             <a class="btn btn-secondary" href="#work">View Work</a>
           </div>
+          <p class="trust-line">Mobile-first websites · Clean branding · Fast live previews</p>
         </div>
 
-        <aside class="hero-studio-card reveal" aria-label="Premium website launch preview">
-          <div class="mock-browser" aria-hidden="true"><span></span><span></span><span></span></div>
-          <div class="hero-preview" role="img" aria-label="Abstract mobile-first landing page mockup for Brandveil Studio India">
-            <span class="preview-label">Live preview flow</span>
-            <strong>Design. Build. Launch.</strong>
-            <div class="preview-lines"><span></span><span></span><span></span></div>
-            <div class="preview-cta">WhatsApp lead ready</div>
+        <aside class="hero-visual" aria-label="Brandveil Studio preview card">
+          <div class="preview-card main-preview">
+            <span class="preview-kicker">Studio Preview</span>
+            <h2>Clean launch system for a real business</h2>
+            <div class="preview-window" aria-hidden="true">
+              <span class="window-dot"></span>
+              <span class="window-line long"></span>
+              <span class="window-line"></span>
+            </div>
           </div>
-          <div class="mini-metrics" aria-label="Website delivery benefits">
-            <div><strong>Mobile-first</strong><span>Clean on phones</span></div>
-            <div><strong>SEO-ready</strong><span>Launch basics set</span></div>
+          <div class="stack-card sage">
+            <span>01</span>
+            <strong>Website design</strong>
+            <p>Clear pages, thoughtful spacing and mobile-first structure.</p>
+          </div>
+          <div class="stack-card blue">
+            <span>02</span>
+            <strong>Branding</strong>
+            <p>Logo, colors and typography that feel consistent.</p>
+          </div>
+          <div class="stack-card clay">
+            <span>03</span>
+            <strong>SEO setup</strong>
+            <p>Titles, descriptions and service keywords ready for launch.</p>
           </div>
         </aside>
       </section>
 
-      <section class="trust-strip section-shell" aria-label="Trust points">
-        <div class="trust-chip"><span aria-hidden="true">✦</span>Mobile-first websites</div>
-        <div class="trust-chip"><span aria-hidden="true">✦</span>Fast delivery</div>
-        <div class="trust-chip"><span aria-hidden="true">✦</span>Live project preview</div>
-        <div class="trust-chip"><span aria-hidden="true">✦</span>SEO-ready setup</div>
-      </section>
-
-      <section class="section-shell section-block" id="services" aria-labelledby="services-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Services</p>
-          <h2 id="services-title">Clear digital services for businesses that need to look trusted online.</h2>
-        </div>
-        <div class="card-grid">
-          <article class="service-card reveal"><span class="service-number">01</span><h3>Website Design</h3><p>Premium, mobile-first website layouts that make your business easy to understand and simple to contact.</p></article>
-          <article class="service-card reveal"><span class="service-number">02</span><h3>Full Stack Development</h3><p>Fast, reliable builds for websites, booking flows, dashboards and custom tools your business can actually use.</p></article>
-          <article class="service-card reveal"><span class="service-number">03</span><h3>Logo Design</h3><p>Clean logo directions that help your brand look professional across WhatsApp, social media and your website.</p></article>
-          <article class="service-card reveal"><span class="service-number">04</span><h3>Branding</h3><p>Color, typography and visual systems that keep your business presence consistent and premium everywhere.</p></article>
-          <article class="service-card reveal"><span class="service-number">05</span><h3>Content Creation</h3><p>Simple website copy and content structure that explains your offer clearly to customers before they call.</p></article>
-          <article class="service-card reveal"><span class="service-number">06</span><h3>SEO</h3><p>Search-friendly pages, metadata and technical basics so your website starts with a stronger foundation.</p></article>
+      <section class="about section-shell section-pad" aria-labelledby="about-title">
+        <div class="section-label">About Brandveil</div>
+        <div class="about-grid">
+          <h2 id="about-title">A simple studio for businesses that want to look serious.</h2>
+          <div class="about-copy">
+            <p>We help businesses, coaching institutes and local brands build a clean online presence through websites, logos, branding, content and SEO basics. No confusing process. No heavy jargon. Just clear design that helps people trust your business.</p>
+            <p class="seo-paragraph">Brandveil Studio India is a digital agency offering website design, full stack development, branding, logo design, content creation and SEO for Indian businesses.</p>
+          </div>
         </div>
       </section>
 
-      <section class="section-shell section-block" id="work" aria-labelledby="work-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Featured Work</p>
-          <h2 id="work-title">Live projects presented with clarity, speed and business purpose.</h2>
+      <section id="services" class="section-shell section-pad" aria-labelledby="services-title">
+        <div class="section-heading">
+          <div class="section-label">Services</div>
+          <h2 id="services-title">Everything your business needs to look better online.</h2>
         </div>
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-preview root-preview" role="img" aria-label="The Root Institution education website preview mockup">
-              <div class="mock-browser" aria-hidden="true"><span></span><span></span><span></span></div>
-              <div class="project-screen"><span>Education / Coaching</span><strong>The Root Institution</strong><i></i><i></i><b></b></div>
-            </div>
-            <div class="project-content">
-              <p class="project-type">Education/coaching institution website</p>
-              <h3>The Root Institution</h3>
-              <p>A focused institution website built to present courses, trust and enquiry paths clearly for students and parents.</p>
-              <a class="btn btn-small" href="https://theroot-institution.vercel.app" target="_blank" rel="noreferrer">Live Preview</a>
-            </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Website Design</h3>
+            <p>Mobile-first business websites that look clean, premium and easy to use.</p>
           </article>
-          <article class="project-card reveal">
-            <div class="project-preview kerala-preview" role="img" aria-label="Kerala Beauty destination website preview mockup">
-              <div class="mock-browser" aria-hidden="true"><span></span><span></span><span></span></div>
-              <div class="project-screen"><span>Travel / Destination</span><strong>Kerala Beauty</strong><i></i><i></i><b></b></div>
-            </div>
-            <div class="project-content">
-              <p class="project-type">Kerala destination suggestion website</p>
-              <h3>Kerala Beauty</h3>
-              <p>A destination-focused website that helps visitors discover top places in Kerala through a clean browsing experience.</p>
-              <a class="btn btn-small" href="https://kerala-beauty.vercel.app" target="_blank" rel="noreferrer">Live Preview</a>
-            </div>
+          <article class="service-card">
+            <h3>Full Stack Development</h3>
+            <p>Custom websites with frontend, backend and deployment support.</p>
+          </article>
+          <article class="service-card">
+            <h3>Logo Design</h3>
+            <p>Simple, professional logos that make your brand easier to remember.</p>
+          </article>
+          <article class="service-card">
+            <h3>Branding</h3>
+            <p>Colors, typography and visuals that make your business look consistent.</p>
+          </article>
+          <article class="service-card">
+            <h3>Content Creation</h3>
+            <p>Clear website and social content that explains your business better.</p>
+          </article>
+          <article class="service-card">
+            <h3>SEO Setup</h3>
+            <p>Search-friendly page titles, descriptions and local/service keywords.</p>
           </article>
         </div>
       </section>
 
-      <section class="section-shell section-block" id="process" aria-labelledby="process-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Process</p>
-          <h2 id="process-title">A simple build process with live previews and direct communication.</h2>
+      <section id="work" class="work-section section-pad" aria-labelledby="work-title">
+        <div class="section-shell">
+          <div class="section-heading split-heading">
+            <div>
+              <div class="section-label">Featured Work</div>
+              <h2 id="work-title">Live projects with a clear purpose.</h2>
+            </div>
+            <p>Selected websites made for real use: easy to open, easy to understand and ready to share.</p>
+          </div>
+
+          <div class="work-grid">
+            <article class="project-card root-project">
+              <div class="project-preview" aria-hidden="true">
+                <span class="preview-tag">Education</span>
+                <div class="preview-title-line"></div>
+                <div class="preview-body-line"></div>
+                <div class="preview-body-line short"></div>
+              </div>
+              <div class="project-content">
+                <p class="project-type">Education Website</p>
+                <h3>The Root Institution</h3>
+                <p>A clean website for a coaching institution designed to improve trust, admissions and online presence.</p>
+                <a class="text-link" href="https://theroot-institution.vercel.app" target="_blank" rel="noreferrer">Live Preview</a>
+              </div>
+            </article>
+
+            <article class="project-card kerala-project">
+              <div class="project-preview" aria-hidden="true">
+                <span class="preview-tag">Travel</span>
+                <div class="preview-title-line"></div>
+                <div class="preview-body-line"></div>
+                <div class="preview-body-line short"></div>
+              </div>
+              <div class="project-content">
+                <p class="project-type">Travel Destination Website</p>
+                <h3>Kerala Beauty</h3>
+                <p>A simple destination discovery website that presents top places in Kerala in a clean and user-friendly way.</p>
+                <a class="text-link" href="https://kerala-beauty.vercel.app" target="_blank" rel="noreferrer">Live Preview</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section-shell section-pad" aria-labelledby="process-title">
+        <div class="section-heading">
+          <div class="section-label">Process</div>
+          <h2 id="process-title">How we work</h2>
         </div>
         <ol class="process-list">
-          <li class="process-step reveal"><span>01</span><p>Understand your business</p></li>
-          <li class="process-step reveal"><span>02</span><p>Plan design and content</p></li>
-          <li class="process-step reveal"><span>03</span><p>Build mobile-first website</p></li>
-          <li class="process-step reveal"><span>04</span><p>Share live preview</p></li>
-          <li class="process-step reveal"><span>05</span><p>Launch and improve SEO basics</p></li>
+          <li><span>01</span><strong>Understand your business</strong></li>
+          <li><span>02</span><strong>Plan the design and content</strong></li>
+          <li><span>03</span><strong>Build a mobile-first website</strong></li>
+          <li><span>04</span><strong>Share a live preview</strong></li>
+          <li><span>05</span><strong>Launch and improve the basics</strong></li>
         </ol>
       </section>
 
-      <section class="section-shell section-block why" aria-labelledby="why-title">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Why Brandveil</p>
-          <h2 id="why-title">Made for local brands, coaching institutes and growing Indian businesses.</h2>
-        </div>
-        <div class="why-grid">
-          <div class="why-point reveal">Business-focused design</div>
-          <div class="why-point reveal">Clean mobile experience</div>
-          <div class="why-point reveal">Branding support</div>
-          <div class="why-point reveal">SEO-ready foundation</div>
-          <div class="why-point reveal">Direct communication</div>
-          <div class="why-point reveal">Fast delivery</div>
+      <section class="why section-shell section-pad" aria-labelledby="why-title">
+        <div class="why-panel">
+          <div class="section-heading">
+            <div class="section-label">Why Brandveil</div>
+            <h2 id="why-title">Why businesses choose Brandveil</h2>
+          </div>
+          <ul class="why-list">
+            <li>Simple process</li>
+            <li>Mobile-first design</li>
+            <li>Clean premium visuals</li>
+            <li>Honest communication</li>
+            <li>Live project preview</li>
+            <li>SEO-ready foundation</li>
+          </ul>
         </div>
       </section>
 
-      <section class="cta section-shell" id="contact" aria-labelledby="cta-title">
-        <div class="cta-panel reveal">
-          <p class="eyebrow">Start your project</p>
-          <h2 id="cta-title">Ready to build your business website?</h2>
+      <section id="contact" class="section-shell cta-section" aria-labelledby="cta-title">
+        <div class="cta-panel">
+          <p class="eyebrow">Start with one message</p>
+          <h2 id="cta-title">Let’s make your business look better online.</h2>
           <p>Message Brandveil Studio India and get a clean, premium and mobile-first website for your business.</p>
           <div class="button-row centered" aria-label="Contact Brandveil Studio India">
             <a class="btn btn-primary" href="https://wa.me/919631192011?text=Hi%20Brandveil%20Studio%20India%2C%20I%20want%20to%20build%20a%20business%20website." target="_blank" rel="noreferrer">WhatsApp: 9631192011</a>
@@ -196,8 +253,15 @@
     </main>
 
     <footer class="footer">
-      <p>© 2026 Brandveil Studio India — Website Design, Branding &amp; SEO Agency.</p>
-      <p>Website designed by Brandveil Studio India.</p>
+      <div>
+        <strong>Brandveil Studio India</strong>
+        <p>Website Design · Branding · SEO</p>
+        <p>Phone/WhatsApp: <a href="tel:+919631192011">9631192011</a></p>
+      </div>
+      <div class="footer-note">
+        <p>© 2026 Brandveil Studio India — Website Design, Branding &amp; SEO Agency.</p>
+        <p>Website designed by Brandveil Studio India.</p>
+      </div>
     </footer>
   </body>
 </html>
