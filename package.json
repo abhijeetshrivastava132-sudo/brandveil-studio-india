@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node scripts/validate-site.mjs",
-    "start": "python3 -m http.server 3000"
+    "dev": "python3 -m http.server 3000",
+    "build": "node scripts/validate-site.mjs && node scripts/build-static.mjs",
+    "preview": "python3 -m http.server 3000 -d dist"
   }
 }
