@@ -5,8 +5,8 @@ const cssExists = existsSync('styles.css');
 const requiredSnippets = [
   '<title>Brandveil Studio India | Website Development, Instagram Marketing, Branding &amp; SEO Agency</title>',
   'Brandveil Studio India helps Indian businesses with website development, logo design, content creation, Instagram marketing, branding and SEO.',
-  '<h1 id="hero-title">Digital presence that makes your business look bigger.</h1>',
-  'Brandveil Studio India creates websites, logos, content, Instagram marketing, branding and SEO-ready pages for businesses that want to look trusted online.',
+  '<h1 id="hero-title">Dikhoge tabhi to bikoge.</h1>',
+  'Brandveil Studio India helps businesses look professional online with websites, branding, logo design, content creation, Instagram marketing and SEO.',
   'https://brandveil-studio-india.vercel.app',
   'The Root Institution',
   'Kerala Beauty',
