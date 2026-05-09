@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Brandveil Studio India | Website Design, Branding, SEO & Social Media</title>
+  <meta name="description" content="Brandveil Studio is a digital marketing agency in India based in Patna. We provide website design, branding, logo design, SEO, content creation, video editing and social media management for businesses." />
+  <meta name="keywords" content="Brandveil Studio, Brandveil Studio India, digital marketing agency in Patna, website design in India, branding agency India, SEO agency Patna, social media management India, video editing agency India" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --yellow: #ffe45c;
+      --brown: #b49d78;
+      --brown-dark: #823b2b;
+      --black: #111111;
+      --white: #ffffff;
+      --blue: #0978e8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--yellow);
+      color: var(--black);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      border: none;
+      font-family: inherit;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .mono {
+      font-family: "Space Mono", monospace;
+    }
+
+    .site {
+      width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .section {
+      position: relative;
+      width: 100%;
+      padding: 82px 6vw;
+      overflow: hidden;
+    }
+
+    .yellow-section {
+      background: var(--yellow);
+      color: var(--black);
+    }
+
+    .brown-section {
+      background: var(--brown);
+      color: var(--white);
+    }
+
+    .dark-brown-section {
+      background: var(--brown-dark);
+      color: var(--white);
+    }
+
+    .header {
+      position: fixed;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1120px, calc(100% - 28px));
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      border-radius: 999px;
+      background: rgba(255, 228, 92, 0.84);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.08);
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 13px;
+      line-height: 1.05;
+    }
+
+    .nav {
+      display: none;
+      align-items: center;
+      gap: 22px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .menu-btn {
+      background: var(--black);
+      color: var(--white);
+      padding: 10px 15px;
+      border-radius: 999px;
+      font-family: "Space Mono", monospace;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .mobile-panel {
+      position: fixed;
+      inset: 0;
+      z-index: 49;
+      background: rgba(17, 17, 17, 0.78);
+      backdrop-filter: blur(16px);
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.25s ease;
+    }
+
+    .mobile-panel.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-menu {
+      position: absolute;
+      right: 16px;
+      top: 82px;
+      width: calc(100% - 32px);
+      max-width: 360px;
+      padding: 22px;
+      border-radius: 28px;
+      background: var(--yellow);
+      color: var(--black);
+      display: grid;
+      gap: 14px;
+    }
+
+    .mobile-menu a {
+      font-size: 22px;
+      font-weight: 800;
+      padding: 12px;
+      border-radius: 16px;
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 110px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1020px;
+    }
+
+    .eyebrow {
+      font-family: "Space Mono", monospace;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 26px;
+    }
+
+    .hero-title {
+      font-size: clamp(64px, 17vw, 140px);
+      line-height: 0.86;
+      letter-spacing: -0.08em;
+      font-weight: 400;
+      max-width: 1000px;
+    }
+
+    .hero-title strong {
+      font-weight: 800;
+      letter-spacing: -0.09em;
+    }
+
+    .hero-copy {
+      margin-top: 34px;
+      max-width: 680px;
+      font-family: "Space Mono", monospace;
+      text-transform: uppercase;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      padding: 13px 19px;
+      font-family: "Space Mono", monospace;
+      font-size: 13px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(9, 120, 232, 0.25);
+    }
+
+    .btn-dark {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .blob {
+      position: absolute;
+      z-index: 1;
+      pointer-events: none;
+      filter: drop-shadow(0 20px 36px rgba(30, 100, 255, 0.22));
+    }
+
+    .blob-1 {
+      width: 190px;
+      height: 190px;
+      left: -95px;
+      bottom: 12%;
+      border: 28px solid rgba(86, 151, 255, 0.78);
+      border-radius: 44% 56% 58% 42%;
+      transform: rotate(18deg);
+    }
+
+    .blob-2 {
+      width: 260px;
+      height: 150px;
+      right: -70px;
+      top: 90px;
+      border: 34px solid rgba(86, 151, 255, 0.72);
+      border-radius: 60px 90px 72px 130px;
+      transform: rotate(18deg);
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 980px;
+      margin: 0 auto 54px;
+    }
+
+    .intro h2 {
+      font-size: clamp(34px, 8vw, 68px);
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -0.06em;
+    }
+
+    .intro strong {
+      font-weight: 800;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .problem-card {
+      background: var(--brown-dark);
+      color: var(--white);
+      padding: 28px;
+      min-height: 230px;
+      border-radius: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .problem-card h3 {
+      font-family: "Space Mono", monospace;
+      font-size: 18px;
+      line-height: 1.22;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .problem-card p {
+      font-family: "Space Mono", monospace;
+      font-size: 14px;
+      line-height: 1.48;
+      opacity: 0.92;
+    }
+
+    .showcase {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+    }
+
+    .showcase-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+
+    .showcase h2 {
+      font-size: clamp(58px, 15vw, 130px);
+      font-weight: 400;
+      line-height: 0.92;
+      letter-spacing: -0.08em;
+    }
+
+    .showcase p {
+      margin-top: 28px;
+      max-width: 620px;
+      font-family: "Space Mono", monospace;
+      font-size: 15px;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .proof {
+      display: grid;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .proof h2 {
+      font-size: clamp(42px, 11vw, 92px);
+      line-height: 0.95;
+      font-weight: 400;
+      letter-spacing: -0.07em;
+    }
+
+    .proof-card {
+      padding: 28px;
+      border-radius: 26px;
+      background: rgba(255, 255, 255, 0.17);
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      backdrop-filter: blur(14px);
+    }
+
+    .proof-card p {
+      font-family: "Space Mono", monospace;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .proof-card strong {
+      display: block;
+      margin-top: 22px;
+      font-family: "Space Mono", monospace;
+      font-size: 13px;
+      text-transform: uppercase;
+      line-height: 1.45;
+    }
+
+    .grow {
+      text-align: center;
+      min-height: 460px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grow h2 {
+      font-size: clamp(44px, 12vw, 88px);
+      line-height: 0.95;
+      font-weight: 400;
+      letter-spacing: -0.06em;
+    }
+
+    .grow h2 strong {
+      font-weight: 800;
+    }
+
+    .grow p {
+      margin: 26px auto 0;
+      font-family: "Space Mono", monospace;
+      font-size: 15px;
+      line-height: 1.45;
+      max-width: 620px;
+    }
+
+    .glass-shape {
+      position: absolute;
+      background: linear-gradient(180deg, rgba(255,255,255,0.36), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 20px;
+      opacity: 0.75;
+      pointer-events: none;
+    }
+
+    .shape-a {
+      width: 230px;
+      height: 230px;
+      left: -55px;
+      top: 55px;
+      border-radius: 0 36px 36px 0;
+    }
+
+    .shape-b {
+      width: 230px;
+      height: 90px;
+      right: -80px;
+      top: 75px;
+    }
+
+    .section-title {
+      font-size: clamp(52px, 13vw, 100px);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -0.08em;
+      margin-bottom: 42px;
+    }
+
+    .service-pills {
+      display: grid;
+      gap: 16px;
+      max-width: 760px;
+    }
+
+    .pill {
+      width: 100%;
+      background: var(--brown-dark);
+      color: var(--white);
+      border-radius: 999px;
+      padding: 18px 22px;
+      font-family: "Space Mono", monospace;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 16px 30px rgba(130, 59, 43, 0.18);
+    }
+
+    .packages-header {
+      margin-bottom: 32px;
+    }
+
+    .packages-header h2 {
+      font-size: clamp(42px, 11vw, 86px);
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -0.06em;
+    }
+
+    .packages-header p {
+      margin-top: 14px;
+      max-width: 600px;
+      font-family: "Space Mono", monospace;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .package-card {
+      min-height: 250px;
+      padding: 26px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.46);
+      background: linear-gradient(180deg, rgba(255,255,255,0.26), rgba(255,255,255,0.08));
+      backdrop-filter: blur(16px);
+    }
+
+    .package-card h3 {
+      font-family: "Space Mono", monospace;
+      font-size: 17px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .package-card ul {
+      padding-left: 18px;
+      font-family: "Space Mono", monospace;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .testimonials h2 {
+      font-size: clamp(44px, 12vw, 86px);
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -0.07em;
+      margin-bottom: 46px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .quote p {
+      font-family: "Space Mono", monospace;
+      font-size: 14px;
+      line-height: 1.55;
+      max-width: 400px;
+    }
+
+    .quote strong {
+      display: block;
+      margin-top: 22px;
+      font-family: "Space Mono", monospace;
+      font-size: 13px;
+      text-transform: uppercase;
+      line-height: 1.45;
+    }
+
+    .contact {
+      min-height: 92vh;
+      display: grid;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .contact h2 {
+      font-size: clamp(58px, 16vw, 118px);
+      font-weight: 400;
+      line-height: 0.92;
+      letter-spacing: -0.08em;
+    }
+
+    .contact-info {
+      font-family: "Space Mono", monospace;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .big-shape {
+      position: absolute;
+      left: -90px;
+      top: 70px;
+      width: min(520px, 70vw);
+      height: min(520px, 70vw);
+      border-radius: 42px 100px 42px 120px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.22);
+    }
+
+    .content-above {
+      position: relative;
+      z-index: 2;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 760px) {
+      .nav {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+
+      .problem-grid,
+      .package-grid,
+      .testimonial-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .service-pills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .proof {
+        grid-template-columns: 1fr 0.8fr;
+      }
+
+      .contact {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .section {
+        padding: 72px 18px;
+      }
+
+      .hero {
+        min-height: 94vh;
+        padding-top: 104px;
+      }
+
+      .hero-title {
+        font-size: 62px;
+      }
+
+      .hero-copy,
+      .showcase p,
+      .grow p {
+        font-size: 13px;
+      }
+
+      .intro {
+        text-align: left;
+      }
+
+      .showcase {
+        min-height: 520px;
+      }
+
+      .showcase h2 {
+        font-size: 58px;
+      }
+
+      .grow {
+        min-height: 390px;
+      }
+
+      .blob-1 {
+        width: 130px;
+        height: 130px;
+        border-width: 20px;
+        left: -70px;
+      }
+
+      .blob-2 {
+        width: 180px;
+        height: 110px;
+        border-width: 24px;
+        right: -85px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site">
+
+    <header class="header">
+      <a href="#" class="brand">
+        Brandveil<br>Studio
+      </a>
+
+      <nav class="nav mono">
+        <a href="#services">Services</a>
+        <a href="#proof">Proof</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn">MENU</button>
+    </header>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <div class="mobile-menu mono">
+        <a href="#services">Services</a>
+        <a href="#proof">Proof</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <main>
+      <section class="section yellow-section hero">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+
+        <div class="hero-content reveal">
+          <p class="eyebrow">Digital Marketing Agency in India</p>
+
+          <h1 class="hero-title">
+            Build a brand<br>
+            people <strong>trust</strong>
+          </h1>
+
+          <p class="hero-copy">
+            Brandveil Studio helps businesses grow with premium websites, branding, SEO, content creation, video editing and social media management.
+          </p>
+
+          <div class="btn-row">
+            <a href="#services" class="btn btn-primary">Learn More</a>
+            <a href="#contact" class="btn btn-dark">Start Project</a>
+            <a href="tel:+919631192011" class="btn btn-light">Call Now</a>
+            <a href="https://wa.me/917261023581" target="_blank" class="btn btn-dark">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section brown-section">
+        <div class="intro reveal">
+          <h2>
+            Digital marketing doesn't have to be difficult.
+            <strong>We're here to help.</strong>
+          </h2>
+        </div>
+
+        <div class="problem-grid">
+          <article class="problem-card reveal">
+            <h3>Getting lost in the digital maze?</h3>
+            <p>
+              We help your business get a clear online roadmap with website design, branding, content and SEO direction.
+            </p>
+          </article>
+
+          <article class="problem-card reveal">
+            <h3>Frustrated with copy-paste designs?</h3>
+            <p>
+              We build clean and custom digital identities that match your business instead of using generic templates.
+            </p>
+          </article>
+
+          <article class="problem-card reveal">
+            <h3>Feeling like your brand is invisible?</h3>
+            <p>
+              We make your business look serious, active and trustworthy so customers understand you faster.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section yellow-section showcase">
+        <div class="blob blob-1"></div>
+
+        <div class="showcase-content reveal">
+          <h2>
+            Make your mark in the digital world.
+          </h2>
+
+          <p>
+            From first impression to final conversion, we design your online presence so people trust your business faster.
+          </p>
+
+          <div class="btn-row">
+            <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
+            <a href="https://wa.me/917261023581" target="_blank" class="btn btn-dark">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section brown-section proof" id="proof">
+        <div class="content-above reveal">
+          <h2>
+            Real work.<br>
+            Real trust.
+          </h2>
+        </div>
+
+        <div class="proof-card reveal">
+          <p>
+            Brandveil Studio worked with The Root Institution to create a cleaner and more professional digital presence for their education brand.
+          </p>
+          <strong>
+            The Root Institution<br>
+            Director — Prashant Kumar
+          </strong>
+        </div>
+      </section>
+
+      <section class="section brown-section grow">
+        <div class="glass-shape shape-a"></div>
+        <div class="glass-shape shape-b"></div>
+
+        <div class="content-above reveal">
+          <h2>
+            Grow your<br>
+            <strong>presence.</strong>
+          </h2>
+
+          <p>
+            We help put your company on the digital map through websites, social platforms, branding, video content and search visibility.
+          </p>
+        </div>
+      </section>
+
+      <section class="section yellow-section" id="services">
+        <h2 class="section-title reveal">What we offer</h2>
+
+        <div class="service-pills">
+          <div class="pill reveal">Website Design</div>
+          <div class="pill reveal">Logo Design</div>
+          <div class="pill reveal">Branding</div>
+          <div class="pill reveal">Content Creation</div>
+          <div class="pill reveal">SEO</div>
+          <div class="pill reveal">Video Editing</div>
+          <div class="pill reveal">Social Media Management</div>
+          <div class="pill reveal">Digital Growth Support</div>
+        </div>
+      </section>
+
+      <section class="section brown-section" id="packages">
+        <div class="packages-header reveal">
+          <h2>Our packages</h2>
+          <p>
+            Choose from flexible digital growth packages according to your business stage. Every package can be customized.
+          </p>
+        </div>
+
+        <div class="package-grid">
+          <article class="package-card reveal">
+            <h3>Foundation</h3>
+            <ul>
+              <li>Basic website design</li>
+              <li>Logo refinement</li>
+              <li>Brand color setup</li>
+              <li>Basic local SEO</li>
+              <li>Starter social media setup</li>
+            </ul>
+          </article>
+
+          <article class="package-card reveal">
+            <h3>Growth</h3>
+            <ul>
+              <li>Custom business website</li>
+              <li>Brand identity system</li>
+              <li>Social media creatives</li>
+              <li>SEO structure setup</li>
+              <li>Content and video support</li>
+            </ul>
+          </article>
+
+          <article class="package-card reveal">
+            <h3>Digit-All</h3>
+            <ul>
+              <li>Full digital presence</li>
+              <li>Website + branding</li>
+              <li>Content strategy</li>
+              <li>Video editing support</li>
+              <li>Monthly social media management</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section brown-section testimonials">
+        <h2 class="reveal">What clients say</h2>
+
+        <div class="testimonial-grid">
+          <div class="quote reveal">
+            <p>
+              Brandveil Studio helped us present our institution in a more professional and trustworthy way online.
+            </p>
+            <strong>
+              Prashant Kumar<br>
+              Director, The Root Institution
+            </strong>
+          </div>
+
+          <div class="quote reveal">
+            <p>
+              Clean design, clear communication and a business-focused approach. The work felt practical and premium.
+            </p>
+            <strong>
+              Education Brand Client
+            </strong>
+          </div>
+
+          <div class="quote reveal">
+            <p>
+              The design was simple, mobile-friendly and easy for customers to understand.
+            </p>
+            <strong>
+              Local Business Client
+            </strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark-brown-section contact" id="contact">
+        <div class="big-shape"></div>
+
+        <div class="content-above reveal">
+          <h2>Ready to grow?</h2>
+        </div>
+
+        <div class="content-above reveal">
+          <div class="contact-info">
+            <p>Brandveil Studio</p>
+            <p>Digital Marketing Agency in India</p>
+            <p>Patna, Bihar, India</p>
+            <p>Call: +91 9631192011</p>
+            <p>WhatsApp: +91 7261023581</p>
+          </div>
+
+          <div class="contact-links">
+            <a class="btn btn-primary" href="#services">Learn More</a>
+            <a class="btn btn-dark" href="#contact">Start Project</a>
+            <a class="btn btn-light" href="tel:+919631192011">Call Now</a>
+            <a class="btn btn-primary" href="https://wa.me/917261023581" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobilePanel = document.getElementById("mobilePanel");
+
+    menuBtn.addEventListener("click", () => {
+      mobilePanel.classList.toggle("active");
+      menuBtn.textContent = mobilePanel.classList.contains("active") ? "CLOSE" : "MENU";
+    });
+
+    document.querySelectorAll(".mobile-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobilePanel.classList.remove("active");
+        menuBtn.textContent = "MENU";
+      });
+    });
+
+    const revealItems = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.16 }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+  </script>
+</body>
+</html>
