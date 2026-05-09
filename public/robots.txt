@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://brandveil-studio-india.vercel.app/sitemap.xml
